@@ -4,6 +4,8 @@ import Input from './Input'
 import RadioButton from './RadioButton'
 import Select from './Select'
 import Textarea from './Textarea'
+import Datepicker from './Datepicker'
+import ChakraInput from './ChakraInput'
 
 function FormControl(props) {
     const { control , ...rest } = props
@@ -19,6 +21,9 @@ function FormControl(props) {
         case 'checkbox':
             return <Checkbox {...rest} />
         case 'date':
+            return <Datepicker {...rest} />
+        case 'chakrainput':
+            return <ChakraInput {...rest} />
         default: return null
     }
 }
